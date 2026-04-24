@@ -402,7 +402,15 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: rgba(245,240,232,0.3);
-    margin-bottom: 14px;
+    margin-bottom: 10px;
+  }
+
+  .auction-note {
+    font-size: 12px;
+    color: rgba(245,240,232,0.4);
+    line-height: 1.6;
+    max-width: 680px;
+    margin-bottom: 16px;
   }
 
   .auction-tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -591,6 +599,21 @@
 
   .final-note { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.5px; }
 
+  /* PRIVACY NOTE */
+  .footer-privacy {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.2);
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    max-width: 760px;
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    margin-top: 32px;
+  }
+  .footer-privacy a { color: rgba(200,64,26,0.7); text-decoration: none; }
+  .footer-privacy a:hover { color: var(--accent); }
+
   /* FOOTER */
   footer { background: var(--ink); padding: 52px 0 36px; }
 
@@ -727,12 +750,12 @@
         <div class="stat-label">Evaluation signals</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">0<span> gut</span></div>
-        <div class="stat-label">Feel required</div>
+        <div class="stat-num">Less<span> guessing</span></div>
+        <div class="stat-label">More structured judgment</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num">1<span> tool</span></div>
-        <div class="stat-label">Replaces the spreadsheet</div>
+        <div class="stat-num">1<span> workspace</span></div>
+        <div class="stat-label">Reduces spreadsheet chaos</div>
       </div>
     </div>
   </div>
@@ -759,14 +782,14 @@
           <div class="problem-num">02</div>
           <div>
             <div class="problem-item-title">Repairs take longer than expected</div>
-            <div class="problem-item-desc">Recon delays compound. The industry average time-to-frontline is 12–18 days. How close is your estimate?</div>
+            <div class="problem-item-desc">Recon delays compound. Many dealers target a tight time-to-frontline window, but parts delays can quickly push a unit beyond plan. How close is your estimate?</div>
           </div>
         </div>
         <div class="problem-item">
           <div class="problem-num">03</div>
           <div>
             <div class="problem-item-title">Floor plan interest quietly erodes margin</div>
-            <div class="problem-item-desc">At $40–$100 per vehicle per day, a 3-week parts delay can erase $500–$1,500 in expected gross before the car ever hits the lot.</div>
+            <div class="problem-item-desc">For dealers carrying floor plan or holding costs, even a multi-week parts delay can erase expected gross before the car ever hits the lot.</div>
           </div>
         </div>
         <div class="problem-item">
@@ -796,7 +819,7 @@
       <div class="solution-step">
         <div class="step-num">02</div>
         <div class="step-title">Evaluate parts feasibility and repair exposure</div>
-        <div class="step-desc">Search for parts across eBay, Car-Part, and other sources. Flag scarcity signals, backorder risk, and repair cost exposure before bidding.</div>
+        <div class="step-desc">Search for parts across eBay, Car-Part, Google, local salvage yards by zip code, and OEM sources. Flag scarcity signals, backorder risk, and repair cost exposure before bidding.</div>
       </div>
       <div class="solution-step">
         <div class="step-num">03</div>
@@ -844,7 +867,7 @@
       <div class="feature-card">
         <div class="feature-icon">PARTS</div>
         <div class="feature-title">Parts Sourcing Intelligence</div>
-        <div class="feature-desc">Search eBay, Car-Part, and Google for parts pricing and availability in one structured flow.</div>
+        <div class="feature-desc">Search eBay, Car-Part, Google, local salvage yards by zip code, and OEM research sources for parts pricing and availability — all in one structured flow.</div>
       </div>
       <div class="feature-card">
         <div class="feature-icon">RISK</div>
@@ -879,8 +902,8 @@
       <div class="feature-card">
         <div class="feature-icon">PORTFOLIO</div>
         <div class="feature-title">Portfolio Analysis</div>
-        <div class="feature-desc">Won, lost, and passed unit history. Monthly spend vs. margin trends.
-        </div>
+        <div class="feature-desc">Review won, lost, and passed unit history and monthly spend vs. margin trends once enough pilot data is captured.</div>
+        <span class="feature-soon">Coming soon</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon">MOBILE</div>
@@ -890,7 +913,7 @@
       <div class="feature-card">
         <div class="feature-icon">SEC</div>
         <div class="feature-title">Secure & Private</div>
-        <div class="feature-desc">Your auction data stays yours. Row-level security on all data. Never shared with third parties.</div>
+        <div class="feature-desc">Your auction data is private and protected. We do not sell your information. Your data may be used to improve your GoCarBid experience.</div>
       </div>
     </div>
   </div>
@@ -929,7 +952,10 @@
       </div>
     </div>
     <div class="audience-auctions">
-      <div class="auction-label">Auction channels supported</div>
+      <div class="auction-label">Where dealers source vehicles</div>
+      <p class="auction-note">
+        These are common vehicle sourcing channels that GoCarBid is designed to help dealers evaluate. GoCarBid is not affiliated with, endorsed by, or directly integrated with these auction platforms during early access.
+      </p>
       <div class="auction-tags">
         <span class="auction-tag">Manheim</span>
         <span class="auction-tag">ADESA</span>
@@ -954,8 +980,8 @@
         <p>GoCarBid is currently collecting feedback from independent dealers, franchise used car managers, wholesalers, and auction buyers. Your input directly determines which features ship first and which pain points get solved.</p>
         <p>The research is focused on real auction experiences — parts backorders that killed margin, repair costs that surprised you, and bid decisions you wish you'd made differently.</p>
         <div class="research-ctas">
-          <a href="https://research.gocarbid.ai/gocarbid-dealer-survey" class="btn-primary" target="_blank" rel="noopener">Dealer Interview Survey →</a>
-          <a href="https://research.gocarbid.ai/usedcar-manager-survey" class="btn-outline" target="_blank" rel="noopener">Used Car Manager Survey →</a>
+          <a href="https://research.gocarbid.ai/gocarbid-dealer-survey" class="btn-primary" target="_blank" rel="noopener">Dealer Feedback Survey →</a>
+          <a href="https://research.gocarbid.ai/usedcar-manager-survey" class="btn-outline" target="_blank" rel="noopener">Used Car Manager Feedback Survey →</a>
           <a href="https://research.gocarbid.ai/" class="research-secondary" target="_blank" rel="noopener">→ Visit the GoCarBid Research Hub</a>
         </div>
       </div>
@@ -969,8 +995,8 @@
           <div class="research-stat-label">Average time to complete — no login required, no commitment</div>
         </div>
         <div class="research-stat">
-          <div class="research-stat-num">100<span>%</span></div>
-          <div class="research-stat-label">Confidential — your data is never shared with third parties</div>
+          <div class="research-stat-num">Private<span> by design</span></div>
+          <div class="research-stat-label">Responses are used for GoCarBid product research and pilot evaluation. We do not sell your data.</div>
         </div>
         <div class="research-stat">
           <div class="research-stat-num">0</div>
@@ -992,7 +1018,7 @@
         <ul class="waitlist-points">
           <li>Priority access when the platform launches</li>
           <li>Direct input into features and product roadmap</li>
-          <li>Opportunity to participate in paid pilot testing</li>
+          <li>Opportunity to participate in a structured private pilot</li>
           <li>No commitment required — just your interest</li>
           <li>Early access pricing for founding members</li>
         </ul>
@@ -1096,6 +1122,7 @@
           <li><a href="#solution">Solution</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#early-access">Early Access</a></li>
+          <li><a href="#privacy">Privacy Notice</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1114,9 +1141,11 @@
         </ul>
       </div>
     </div>
+    <div class="footer-privacy" id="privacy">
+      Privacy Notice — Submissions are used only for GoCarBid product research, pilot evaluation, and follow-up communication. We do not sell your data.
+    </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 GoCarBid · gocarbid.ai · All rights reserved</div>
-      <div class="footer-contact">Questions? <a href="mailto:research@gocarbid.ai">research@gocarbid.ai</a></div>
     </div>
   </div>
 </footer>
